@@ -16,3 +16,6 @@
 				va ad eliminare l ultimo link, ovvero va a decrementare di uno il valore di link
 				attaccati ad un file
 	-	mv
+	-	>	->	Permette di andare a scrivere su un file l output (overwrite)
+	-	>>	-> Invece di fare l overwrite fa l append
+	-	more	->	?
