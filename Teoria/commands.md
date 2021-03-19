@@ -5,7 +5,7 @@
 	-	bash / sh	-> invoco altre shell o bash (args: -x)
 	-	id	-> Mostra info riguardo l utente in uso corrente
 	-	who / w	-> 'w' ci mostra qualche log in più
-	-	ls	->	(args: -l -a -h -A(mostra tutto) -R(inverte alfabetico) 
+	-	ls	->	(args: -l -a -h -A(mostra tutto) -R(ricorsivo) -r(inverte alfabetico) 
 				-t(ultima modifica) -d(info specifiche di un determinato file) -i (stampa anche l i-number, ovvero))
 	-	touch	-> va a mettere al momento l ultima modifica, non serve quindi solo per creare un file dal nulla
 	-	chmod, chown & chgrp (per questi ultimi due si deve essere superuser)
