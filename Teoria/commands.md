@@ -18,4 +18,5 @@
 	-	mv
 	-	>	->	Permette di andare a scrivere su un file l output (overwrite)
 	-	>>	-> Invece di fare l overwrite fa l append
-	-	more	->	?
+	-	more	->	Mostra il testo per parti, mentre cat lo mostra stampato integralmente in una volta
+	-	cat		->	Stampa integralmente, spesso usato per casting
