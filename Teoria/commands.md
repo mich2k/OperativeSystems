@@ -16,7 +16,29 @@
 				va ad eliminare l ultimo link, ovvero va a decrementare di uno il valore di link
 				attaccati ad un file
 	-	mv
-	-	>	->	Permette di andare a scrivere su un file l output (overwrite)
-	-	>>	-> Invece di fare l overwrite fa l append
+	-	> \ <	->	Permette di andare a scrivere su un file l output (overwrite)
+	-	>> \ <<	-> Invece di fare l overwrite fa l append
 	-	more	->	Mostra il testo per parti, mentre cat lo mostra stampato integralmente in una volta
+                    space (page skip), enter (line skip)
 	-	cat		->	Stampa integralmente, spesso usato per casting
+	-	sort	->	Fa' il sorting attraverso il casting, come 'sort < file' seguendo l ordine ASCII, prima spazi 			bianchi, poi maiuscole e infine minuscole in ordine alfabetico, per impostare questo tipo di 
+				ordinamento scrivo "LC_ALL=C" + "export LC_ALL"	(args: -f (diventa case insensitive) -c (per check, ci dice se un file è in ordine alfabetico) -C (sempre un check con storage del valore
+				in "echo $?", 1 se disordinato, 0 se sorted) -u (rimuove le righe doppie equivalenti))
+				
+				useful:
+					"sort < unsorted_file > sorted_file"
+	-	grep	->	(args: -n (mostra il numero d ordine delle linee) -i (diventa case insensitive)
+					-v (riporta soltanto le linee che non contengono la string specificata) ) 
+				
+				subcommands:
+					->	"grep string < textfile" (stampa tutte le linee in cui 'string' compare
+					->	"grep ing < textfile" (si può usare anche con frazioni"
+					->	"grep 'string ' < textfile" (single quote)
+					->	"grep '^str' < textfile" (considera tutte le linee che iniziano per 'str')
+					->	"grep 'ing$' < textfile" (considera tutte le linee che finiscono per 'ing')
+						-> "grep '\.$' < textfile" (considera tutte le lInee terminano col punto usando l escape)
+	-	rev		-> Inverte la stampa (use: rev < file)
+	-	wc		->	{lines;	words; chars} con args -l (lines) -w (words) -c (chars), WARN: usare sempre la 						ridirezione con < altrimenti nello stdout avremo 'output + filename'
+	-	head/tail	-> args( -{numberoflines}, senza l arg considerano come valore 10 ), stampano/considerano le 				prime (head) o ultime (tail) {numberoflines} linee (ex: head -5 < filename)
+	-	tee			-> va a creare un file con scritto il risultato parizale del e nel processo di 						piping
+	-	kill {PID}
