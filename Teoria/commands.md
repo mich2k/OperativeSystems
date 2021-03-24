@@ -42,3 +42,8 @@
 	-	head/tail	-> args( -{numberoflines}, senza l arg considerano come valore 10 ), stampano/considerano le 				prime (head) o ultime (tail) {numberoflines} linee (ex: head -5 < filename)
 	-	tee			-> va a creare un file con scritto il risultato parizale del e nel processo di 						piping
 	-	kill {PID}
+    -   echo $  ->  Fa l echo riguardo l ultimo comando eseguito
+    -   date    -> Locale del sistema
+    -   diff    -> Riporta la differenza di linee tra due file ( '<' si riferisce al primo file e '>' al secondo )
+    -   find
+    -   env     -> Shows all environments vars
