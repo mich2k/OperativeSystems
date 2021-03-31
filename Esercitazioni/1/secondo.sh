@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#!/usr/bin/bash
 
 cd $1
 if [ -f $2 ]
@@ -8,9 +8,9 @@ fi
 for i in *; do     #   for i in *      ->  considera tutti i file regolari
                 #   for i in .*     ->  considera tutti i file nascosti
                 #   for i in .* *   ->  considera entrambi
-if [ -d $i -a -x $i ]; then
-    echo Directory $(pwd)/$i
-    $0 $(pwd)/$1 $2
+if [ -d $i -a -x $i ]; then     
+    echo "Esploro directory $(pwd)/$i"
+    secondo.sh $(pwd)/$i $2
 fi
 
 done
