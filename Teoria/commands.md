@@ -47,3 +47,26 @@
     -   diff    -> Riporta la differenza di linee tra due file ( '<' si riferisce al primo file e '>' al secondo )
     -   find
     -   env     -> Shows all environments vars
+    -   eval    ->  Usato quando si assegna un comando come stringa ad una variabile
+                        ex: x=ls, eval $x
+    -   shift   -> con lo shift pediamo il parametro più piccolo di valore, $1->eliminato, $2->$1, 
+                                            $3->$2 etc..
+    -   set
+    -   test    -> serve per valutare un espressione, ha valore 0 se success altrimenti != 0
+                        (args: -f esistenza di un file, -d esistenza directory, -r se si ha il diritto
+                                di lettura/scrittura su quel file con -x e -w)
+                        
+                        ex:
+                            -   test stringa1 != stringa 2      SPAZIO OBBLGIATORIO (così non è  
+                                                                            assegnamento)
+                            -   test -z stringa                 Verifica se è nulla (senza -z verifica 
+                                                                            che non è nulla)
+                            -   test numero1 [-eq -ne -gt -ge -lt -le] numero2
+                                                    
+                                            
+                            -   test
+                            
+                        ATTENZIONE: 
+                            Test tra numeri si deve usare -eq, mentre per le stringhe ' = ' spaziato
+    -   exit
+    -   read {nome_var} -> spesso seguita da "if test $var = yes", legge da StdIn
