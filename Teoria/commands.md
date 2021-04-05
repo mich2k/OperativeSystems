@@ -70,3 +70,20 @@
                             Test tra numeri si deve usare -eq, mentre per le stringhe ' = ' spaziato
     -   exit
     -   read {nome_var} -> spesso seguita da "if test $var = yes", legge da StdIn
+    
+    <!-- p. BICOCCHI -->
+    
+    -   cut     -> taglia verticalmente
+            -> ex: cut -d ' ' -f 1  
+                uso come delimitatore lo spazio (spesso si usano i :) e prendo il field 1
+                
+    -   tr      -> trasforma gruppi di caratteri con pattern matching
+            -> ex:
+                tr a b
+                tr [a-z] 5  minuscole in '5'
+                tr [:lower:] [:upper:]  trasforma le minuscole in maiuscole
+                
+    -   uniq    -> Senza parametri, tutte le linee uguali MA ADIANCENTI vengono rimosse
+                        con l opzione '-u' rimuove GLOBALMENTE i duplicati
+    -   sed 
+    -   awk
