@@ -10,7 +10,7 @@ for i in *; do     #   for i in *      ->  considera tutti i file regolari
                 #   for i in .* *   ->  considera entrambi
 if [ -d $i -a -x $i ]; then     
     echo "Esploro directory $(pwd)/$i"
-    secondo.sh $(pwd)/$i $2
-fi
+    secondo.sh $(pwd)/$i $2         # deve essere relativa semplice o qui dobbiamo          
+fi                                  # rimuovere $(pwd)
 
 done
