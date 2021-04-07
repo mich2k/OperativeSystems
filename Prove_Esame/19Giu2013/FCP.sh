@@ -1,5 +1,10 @@
 #!/usr/bin/sh
 
+if [ ! $# -eq 3 ]; then
+    echo non sono 3 param ma $#
+    exit 7
+fi
+
 case $1 in
 /*);;
 *)  echo $1 non e\' una dir assoluta
@@ -9,7 +14,7 @@ esac
 expr $2 + 0 > /dev/null 2>&1
 if [ ! $? -eq 2 -a ! $? -eq 3 ]; then   # vedo se il ritorno e\' 2 o 3
     echo $2 e\' numerico
-    if [ $2 -ge 2 ]; then
+    if [ ! $2 -ge 2 ]; then
         echo $2 non e\' maggiore uguale a 2
         exit 2
     fi
@@ -21,7 +26,7 @@ fi
 expr $3 + 0 > /dev/null 2>&1
 if [ ! $? -eq 2 -a ! $? -eq 3 ]; then   # vedo se il ritorno e\' 2 o 3
     echo $3 e\' numerico
-    if [ $3 -gt 0 ]; then   #greater than
+    if [ ! $3 -gt 0 ]; then   #greater than
         echo $3 non e\' strettamente positivo
         exit 4
     fi
