@@ -1,16 +1,15 @@
 #! /usr/bin/sh
 
-# GOAL: stampo tutti i file regolari (non directory) nella working path corrente
+# GOAL: stampo tutti i file regolari (non directory) nella working path corrente e subdirs
 
 #todo: controllo input
 
-cd $1
-for i in *; do
 
-if  [ ! -f $i ]; then
-continue
+if [ ! -d $1 -o ! -x $1 ];then
+	exit 1
 fi
 
-echo $i file
+PATH=$PATH:$(pwd)
+export PATH
 
-done
+print_files_recursive.sh $1
