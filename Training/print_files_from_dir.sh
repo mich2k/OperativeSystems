@@ -6,6 +6,7 @@
 
 
 if [ ! -d $1 -o ! -x $1 ];then
+    echo "richiesta dir esistente ed attraversabile ($1 non soddisfa i requisiti)"
 	exit 1
 fi
 
