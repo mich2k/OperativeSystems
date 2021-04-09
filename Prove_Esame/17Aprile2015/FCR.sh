@@ -3,7 +3,6 @@
 cd $1
 tempfile=$3
 X=$2
-files=
 
 for curr_file in *;do
     if [ -f $curr_file -a -r $curr_file ];then
