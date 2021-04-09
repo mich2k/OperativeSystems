@@ -10,7 +10,7 @@ for curr_file in *;do
         lines=$(wc -l < $curr_file)
         if [ "$lines" = "$2" ]; then
             echo $(pwd) compatibile
-            echo $(pwd)/$curr_file > $3
+            echo $(pwd)/$curr_file >> $3
         fi
     fi
 done
