@@ -6,7 +6,9 @@ K=$2
 
 #cont file che soddisfano la specifica
 
-if [ ! $# -ge 3 ]; then
+#WORKING TEST ./FCP.sh 2 2 $(pwd)/dir $(pwd)/dir
+
+if [ ! $# -ge 4 ]; then
     echo $# non sufficiente, richieste Q+2
     exit 1
 fi
