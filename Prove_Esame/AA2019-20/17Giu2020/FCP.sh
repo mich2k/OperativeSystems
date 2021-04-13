@@ -4,6 +4,8 @@ cont=1
 B=${@:$#}
 echo $B
 
+# WORKING TEST: ./FCP.sh $(pwd)/dir $(pwd)/dir 4    COME SEMPRE stampa doppio passando due volte la stessa dir
+
 if [ ! $# -ge 3 ]; then
     echo errore richiesti almeno Q+1 parametri con Q ge 2, non $#
     exit 1

@@ -87,3 +87,6 @@
                         con l opzione '-u' rimuove GLOBALMENTE i duplicati
     -   sed 
     -   awk
+            -> ex:
+                awk "NR:$rownumber" file.sh
+    -   basename
