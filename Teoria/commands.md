@@ -37,6 +37,9 @@
 					->	"grep '^str' < textfile" (considera tutte le linee che iniziano per 'str')
 					->	"grep 'ing$' < textfile" (considera tutte le linee che finiscono per 'ing')
 						-> "grep '\.$' < textfile" (considera tutte le lInee terminano col punto usando l escape)
+					->	"grep -c '^$' file"	considera SOLO le linee vuote e le conta, più utile è "grep -c -v '^$' file", che conta/considera le linee non vuote    (verificare anche col param. -e per extended test)
+						
+                    
 	-	rev		-> Inverte la stampa (use: rev < file)
 	-	wc		->	{lines;	words; chars} con args -l (lines) -w (words) -c (chars), WARN: usare sempre la 						ridirezione con < altrimenti nello stdout avremo 'output + filename'
 	-	head/tail	-> args( -{numberoflines}, senza l arg considerano come valore 10 ), stampano/considerano le 				prime (head) o ultime (tail) {numberoflines} linee (ex: head -5 < filename)
@@ -89,4 +92,5 @@
     -   awk
             -> ex:
                 awk "NR:$rownumber" file.sh
+                awk "NR:3" file.sh
     -   basename

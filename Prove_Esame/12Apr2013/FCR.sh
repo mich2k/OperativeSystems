@@ -18,7 +18,7 @@ for curr_file in *;do
             else
                 echo -n "file: \"$curr_file\", prima linea: "
                 echo $(head -1 $curr_file)
-            fi
+            
             ;;
     esac
     fi
