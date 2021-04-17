@@ -27,6 +27,19 @@ tempfile=/tmp/tmp$$
 # da qui inizio la parte sulla/e gerarchie/fasi
 
 
+# ALGORITMO DEL TIPO: trovare dir chiamata $dir_name in una directory O più gerarchie/directory
+# E' NECESSARIO USARE IL CASE!
+
+case $1 in
+    */$2)   #echo dir con nome compatibile in $(pwd), verifico se esiste un file compatibile..
+        for current_file_in_found_dir in *; do 
+            if [ -f $current_file_in_found_dir -a -r $current_file_in_found_dir ]; then     # -r NON verifica che è anche un file, verifica solo se si hanno i perm. di read (al contrario di quanto scritto sul man.)
+                # controlli necessari per verificare il file sia compatbile o altro
+            fi
+        done
+esac
+
+
 
 
 # TEMPLATE SCHELETRO FILE RICORSIVO
