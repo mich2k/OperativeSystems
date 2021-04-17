@@ -43,3 +43,25 @@ esac
 
 
 # TEMPLATE SCHELETRO FILE RICORSIVO
+
+  
+#!/usr/bin/sh
+
+cd $1
+
+for file in *; do
+    if [ -f $file -a -r $file ];then
+        # operazione sul file_current
+    fi
+done
+
+for dir in *;do
+    if [ -d $dir -a -x $dir ];then
+        # $dir è il basename di tutte le subdir che sto esplorando
+        $0 $(pwd)/$dir $2
+    fi
+done
+
+
+# FINE TEMPLATE SCHELETRO FILE RICORSIVO
+
