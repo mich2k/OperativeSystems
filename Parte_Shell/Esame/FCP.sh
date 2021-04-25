@@ -64,7 +64,6 @@ for Ger in $*; do  # organizzo le Y fasi, nonchè le Y chiamate al file ricorsiv
 done
 
 K=  # "inizializzo" la variabile K, questa sarà l input successivo dall utente
-name=   # "inizializzo" la variabile name, ovvero il nome dell utente che inserirà quando richiesto
 
 compatible_rows=$(wc -l < $tempfile)
 
@@ -91,10 +90,12 @@ if [ ! $? -eq 2 -a ! $? -eq 3 ]; then   # in caso l expr ritorni ($?) due o tre 
     #echo $K e\' numerico
     if [ ! $K -ge 1 -o ! $K -le $J ]; then # se non è maggiore uguale a uno e minore uguale a J esco
         echo $K non e\' maggiore uguale di \'1\' e minore uguale di \'$J\'
+        rm $tempfile
         exit 8
     fi
 else
     echo $K non e\' numerico
+    rm $tempfile
     exit 9
 fi
 
