@@ -19,14 +19,11 @@ appendere, nread numero caratteri letti */
   char buffer[BUFSIZ];
   /* buffer per la lettura/scrittura */
 )
-if ((outfile = open(f1, O_WRONLY | O_APPEND | O_CREAT, PERM)) < 0
+if ((outfile = open(f1, O_WRONLY | O_APPEND | O_CREAT, PERM)) < 0){
   /* apertura in append o creazione */
   return 1;
   while ((nread = read(0, buffer, BUFSIZ)) > 0)
   /* si legge dallo standard input */
-  {
-    Sistemi Operativi e Lab.(Prof.ssa Letizia Leonardi)
-  }
   if (write(outfile, buffer, nread) < nread) {
     close(outfile);
     return 2; /* errore */
