@@ -2,7 +2,7 @@
 #include <fcntl.h>  // controllo file
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>    // strlen per char input
+#include <string.h>    // strlen per char input, strcat per concatenare, strcpy, strcmp..
 #include <sys/wait.h>  // child wait
 #include <time.h>      // seed numeri casuali
 #include <unistd.h>    // unix cmd
@@ -22,9 +22,29 @@ if (argc != 4) {  // 1+3, in questo caso devono essere 3
  *
  */
 
+int file_descriptor;
+
 if ((file_descriptor = open(argv[1], O_RDWR)) < 0) {
     puts("Errore in apertura file");
     exit(1);
+}
+
+
+#define PERM 0644
+
+char* filename ="test.txt";
+fd_write = creat(filename, PERM);
+if (fd_write < 0) {
+    printf("Impossibile creare il file %s\n", filename );
+    exit(-1);
+}
+close(fd_write);
+
+
+/* Controllo che un param i-esimo sia dir assoluta */
+if (argv[i][0] != '/') {
+    printf("\nErrore con il path di indice \'%d\', non è un path assoluto.");
+    exit(2);
 }
 
 /*
@@ -118,7 +138,10 @@ int esempio_child_con_ritorno(void) {
         exit_s = status >> 8;
         /* selezione degli 8 bit piu’ significativi */
         exit_s &= 0xFF;
-        printf(”Per il figlio % d lo stato di EXIT e % d\n”, pid, exit_s);
+        if(exit_s == 255)
+            puts("Errore!");
+        else
+            printf(”Per il figlio % d lo stato di EXIT e % d\n”, pid, exit_s);
     }
     exit(0);
 }
