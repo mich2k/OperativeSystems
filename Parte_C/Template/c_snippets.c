@@ -238,3 +238,17 @@ int execl_con_fork() {
         exit(1);
     }
 }
+
+/*  PIPES   */
+
+// definire una pipe
+typedef int pipe_t[2];
+pipe_t* _pipe = malloc(sizeof(pipe_t) * n_figli);
+free(_pipe);
+
+// controllare che la creazione di una pipe abbia avuto successo
+    if (pipe(piped) < 0) {
+        printf("Errore creazione pipe\n");
+        exit(2);
+    }
+

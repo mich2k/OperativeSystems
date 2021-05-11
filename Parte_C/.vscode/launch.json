@@ -8,8 +8,10 @@
             "name": "clang-11 - Compila ed esegui il debug del file attivo",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
+            "program": "${fileDirname}/a.out",
+            "args": [
+                "test"
+            ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
@@ -23,7 +25,7 @@
                 }
             ],
             "preLaunchTask": "C/C++: clang-11 compila il file attivo",
-            "miDebuggerPath": "/usr/bin/clang"
+            "miDebuggerPath": "/usr/bin/lldb-mi"
         }
     ]
 }
