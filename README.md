@@ -7,4 +7,6 @@ Contenuto Repo:
   - Esercitazioni Lezioni
   - Simulazioni Esami
   - Sum-Up File contenente tutti i comandi utili
+  <details>
   - PDF Sbloccati dalla pwd (così da poter fare copy&paste)
+  </details>
