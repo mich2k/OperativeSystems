@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
 
     /* creazione figli */
     for (int i = 1; i <= (argc - 1); i++) {
-        if (pipe(piped[i]) != 0) {
+        if (pipe(piped[i]) != 0) {  // CICLO PIPE DEDICATO !
             printf("Errore creazione pipe con indice %d", i);
             _free(piped,file_desc_arr,argc);
             exit(-5);

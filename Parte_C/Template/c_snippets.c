@@ -178,7 +178,7 @@ int esempio_child_con_ritorno(void) {
 
 int execl_base() {
     printf(”Esecuzione di ls\n”);
-    execl(”/ bin / ls”, ”ls”, ”- l”, (char*)0);
+    execl(”/bin/ls”, ”ls”, ”- l”, (char*)0);
     printf(”Errore in execl\n”);
     exit(1);
 }
@@ -188,10 +188,10 @@ int execl_base() {
 int execv_base() {
     char* av[3];
     av[0] =”ls”;
-    av[1] =”- l”;
+    av[1] =”-l”;
     av[2] = (char*)0;
     printf(”Esecuzione di ls\n”);
-    execv(”/ bin / ls”, av);
+    execv(”/bin/ls”, av);
     printf(”Errore in execv\n”);
     exit(1);
 }
