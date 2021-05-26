@@ -1,10 +1,16 @@
-/* FILE: pipe-newGenerico1.c */
 #include <fcntl.h>
+#include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/wait.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 #include <unistd.h>
+
+#define PERM 0644
+
+typedef int pipe_t[2];
+
 int main(int argc, char** argv) {
     int pid, j, piped[2];
     int L;                          
