@@ -252,3 +252,42 @@ free(_pipe);
         exit(2);
     }
 
+
+
+// STRUCT, LETTURA E SCRITTURA: (9Set16)
+
+     ret = write(figlioFiglio[i][1], s_arr, sizeof(s_arr));
+            if (ret == -1 || ret != sizeof(s_arr)) {
+                printf("\nErrore write o non coincidenza sull\' indice %d\n", i);
+            }
+
+
+    ret = read(figlioFiglio[i][0], s_arr, sizeof(s_arr));
+          if (ret == -1 || ret != sizeof(s_arr)) {
+              printf("\nErrore read o non coincidenza sull\' indice %d\n",
+                     i);
+          }
+
+
+    // codice padre
+
+    while((ret=read(figlioFiglio[0][N],s_arr,sizeof(s_arr))) != 1){
+        
+    }
+
+
+
+    while (read(file_descriptor, &c, 1) != 0) {
+        if (c == 'a') {
+            printf(
+                "Figlio indice %d, associato a \'%c\', trovata "
+                "occorrenza.\n",
+                i, c);
+        }
+    }
+
+
+    if ((file_descriptor = open(argv[i+1], O_RDWR)) < 0) {  // ATTENZIONE!! 'i+1' non '1'
+        puts("Errore in apertura file");
+        exit(-1);
+    }

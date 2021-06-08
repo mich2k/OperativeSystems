@@ -1,3 +1,6 @@
 {
-    "previewServer.port": 54402
+    "previewServer.port": 54402,
+    "files.associations": {
+        "*.tcc": "c"
+    }
 }
