@@ -37,6 +37,11 @@ int main(int argc, char** argv) {
 
     strcpy(filename, argv[1]);
 
+    if(L <= 0){
+        printf("\nErrore: L deve essere > 0");
+        exit(2); // dovrebbe essere 3 eh ma mi scoccio
+    }
+
     // printf("\n filename: %s, lunghezza: %d, N: %d", filename, L, N);
 
     for (int i = 0; i < N; i++) {
