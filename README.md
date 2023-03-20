@@ -6,7 +6,6 @@ Contenuto Repo:
   - Appunti Corso [.odt files]
   - Esercitazioni Lezioni
   - Simulazioni Esami
-  - Sum-Up File contenente tutti i comandi utili
   - [Comandi shell sum-up](Parte_Shell/shell-commands.md)
   - [Shell snippets](Parte_Shell/shell-snippets.sh)
   - [C snippets](Parte_C/Template/c_snippets.c)
