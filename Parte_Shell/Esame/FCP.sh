@@ -83,7 +83,7 @@ fi
 
 K=  # "inizializzo" la variabile K, indicata nel testo come variabile per selezionare la riga tra le directory compatibili trovate
 
-echo Michele inserisca la variabile K, per selezionare la directory tra quelle trovate
+echo Inserisca la variabile K, per selezionare la directory tra quelle trovate
 read K
 
 expr $K + 0 > /dev/null 2>&1 

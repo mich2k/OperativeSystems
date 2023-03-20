@@ -3,10 +3,11 @@
 Operative Systems AA: 2020/2021
 
 Contenuto Repo:
-  - Appunti Corso
+  - Appunti Corso [.odt files]
   - Esercitazioni Lezioni
   - Simulazioni Esami
   - Sum-Up File contenente tutti i comandi utili
-  <details>
-  - PDF Sbloccati dalla pwd (così da poter fare copy&paste)
-  </details>
+  - [Comandi shell sum-up](Parte_Shell/shell-commands.md)
+  - [Shell snippets](Parte_Shell/shell-snippets.sh)
+
+è piena di "bloatware" ma sono necessari per testare gli script shell per l'esplorazione ricorsiva & regex.
