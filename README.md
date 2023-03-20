@@ -9,5 +9,7 @@ Contenuto Repo:
   - Sum-Up File contenente tutti i comandi utili
   - [Comandi shell sum-up](Parte_Shell/shell-commands.md)
   - [Shell snippets](Parte_Shell/shell-snippets.sh)
+  - [C snippets](Parte_C/Template/c_snippets.c)
+
 
 è piena di "bloatware" ma sono necessari per testare gli script shell per l'esplorazione ricorsiva & regex.
